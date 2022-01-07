@@ -9,31 +9,31 @@ for i in range(0,n):
 
 anal = []
 for item in list2:
-    anogram = []
+    pali = []
     karma = []
     if (len(item)) % 2 != 0:
         mid = int((len(item)-1)/2)
         for (i,j) in zip(range(mid-1,-1,-1), range(mid+1,len(item))):
             if item[i] == item[j]:
-                anogram.append('true')
+                pali.append('true')
             else:
-                anogram.append('false')
+                pali.append('false')
     
     elif (len(item)) % 2 == 0:
         lmid = int(len(item)/2) - 1
         rmid = int(len(item)/2)
         for (i,j) in zip(range(lmid,-1,-1), range(rmid,len(item))):
             if item[i] == item[j]:
-                anogram.append('true')
+                pali.append('true')
             else:
-                anogram.append('false')
+                pali.append('false')
             
-    for k in range(len(anogram)):
+    for k in range(len(pali)):
         karma.append('true')
-    if karma == anogram:
+    if karma == pali:
         anal.append(item)
 
-# Longest anogram possible in the list1
+# Longest Palindrome possible in the list1
 
 lenitem = []
 for item in anal:
