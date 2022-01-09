@@ -62,6 +62,8 @@ def peek(stack):
     return
 
 def itr2(node,res):
+    if node is None:
+        return([])
     stack = []
     while True:
         while node is not None:
